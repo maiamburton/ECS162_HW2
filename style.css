@@ -1,0 +1,161 @@
+html, body, h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    text-align: center;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 100px 30px 30px 30px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap as needed */
+    justify-content: space-around; /* Distributes space around items */
+    align-items: center; /* Vertically aligns items */
+}
+
+a:link {
+    color: #41BBD9;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #006E90;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.left, .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.dark-section {
+    background-color: #EEEFEE;
+}
+
+.light-section {
+    background-color: #FFFFFF;
+}
+
+.dark-section, .light-section {
+    flex: 1 1 50%; /* Each section takes up 50% of the flex container */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.banner {
+    background-color: #FFFFFF;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 0px 40px; /* top/bottom, left/right */
+}
+
+.banner .banner-buttons {
+    text-decoration: none;
+    padding-bottom: 0px;
+}
+
+.banner-buttons {
+    padding: 5px 10px; /* Adjust padding if necessary */
+    max-width: 100%; /* Ensure buttons do not overflow */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Keeps the content from spilling out */
+    text-overflow: ellipsis; /* Adds an ellipsis if the text overflows */
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.banner-buttons:hover, .banner-buttons:focus {
+    transform: scale(1.2);
+}
+
+.banner .right {
+    justify-content: flex-end;
+    gap: 40px;  /* spacing between banner tags */
+    padding: 0px;
+}
+
+#logoB {
+    color: #000000;
+}
+
+#logoS {
+    color: #006E90
+}
+
+#explore {
+    color: #41BBD9;
+    background-color: #FFFFFF;
+    border: 2px solid #41BBD9;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#play {
+    color: #000000;
+    background-color: #F18f01;
+    border: 2px solid #F18f01;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#gameFrame {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+#learnMore {
+    color: #000000;
+}
+
+#welcomeTitle {
+    font-size: 32px;
+}
+
+#subtitle {
+    color: #006E90;
+}
+
+#titleEmph {
+    color: #99C24D;
+}
+
+#intro {
+    display: inline-block;
+}
+
+#home_img {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+
+    display: block;
+    margin: 0px;
+    padding: 15px 10px;
+}
+
+
+/*
+Color palette
+https://coolors.co/006e90-f18f01-adcad6-99c24d-41bbd9
+*/

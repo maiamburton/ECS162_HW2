@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Burton & Sharp Game Site</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="blackjack.js"></script>
+</head>
+<body>
+    <header>
+        <section class="banner">
+            <section class="left">
+                <a href="#top-section" class="banner-words">
+                    <h3 title="To the top">
+                        <section id="logo">
+                            <span id="logoB">Burton</span><span id="logoS">Sharp</span>
+                        </section>
+                    </h3>
+                </a>
+            </section>
+
+            <section class="right">
+                <a href="#top-section" id ="learnMore" class="button-style banner-buttons"><p>Learn more</p></a>
+                <button type="button" id="explore" class="banner-buttons"><strong>Explore Games List!</strong></button>
+                <button type="button" id="play" class="banner-buttons"><strong>Play Now!</strong></button>
+            </section>
+        </section>
+    </header>
+    <main>
+        <section class="light-section left intro">
+            <h1 id="welcomeTitle">Welcome to <span id="titleEmph">Website Name Here!</span></h1>
+            <h4 id="subtitle">Classic fun at your fingertips!</h4>
+            <p>Our site is where old favorites meet new challenges! Whether you're bouncing back to the retro vibes of 
+                Pong, testing your wit with Wordle, or dealing cards in Blackjack, we've got you covered with plenty of 
+                games to keep you entertained.
+            </p>
+        </section>
+        <section class="light-section right">
+            <img src="image_holder.png" id="home_img">
+        </section>
+
+        <section class="dark-section">
+
+            <select id="gameSelect" onchange="changeGame()">
+                <option value="black_jack/blackjack.html">BlackJack</option>
+                <!--<option value="hangman.html">Hangman</option
+                <option value="space_invaders.html">Space Invaders</option> -->
+            </select>
+        
+            <iframe id="gameFrame" src="black_jack/blackjack.html" width="640" height="480"></iframe>
+        </section>
+    </main>
+</body>
+</html>

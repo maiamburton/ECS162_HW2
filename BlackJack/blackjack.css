@@ -1,0 +1,91 @@
+body {
+    background-image: url('green_background.png');
+    /* https://depositphotos.com/photos/poker-table-texture.html */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+img {
+    height: 150px;
+    width: 100px;
+}
+
+.game-interface {
+    position: relative;
+    margin-top: 20px;
+    padding-left: 10px; /* Padding to ensure content isn't too close to the edge */
+}
+.round-info {
+    color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+.card {
+    border-radius: 10px;
+    height: 150px;
+    width: 100px;
+    margin: 20px auto;
+    display: block;
+}
+
+.dealer-card {
+    margin: 20px auto;
+}
+.player-card {
+    margin: 0 10px;
+}
+.player-cards-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.button {
+    color: #FFFFFF;
+    background-color: #218838;
+    border: 1px solid #DAA520;
+    border-radius: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px; /* Adjusted margin for better alignment */
+}
+.split-button {
+    display: none; /* Hidden by default */
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px dotted black;
+}
+.split-button.active {
+    display: inline-block; /* Show the button */
+}
+.bet-amount {
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+}
+.total-amount {
+    color: #FFFFFF;
+    text-align: left;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+/*
+Table Green: #0F9D58
+Card White: #FFFFFF
+Card Back Red: #BB1333 
+Gold Accents: #DAA520
+Button Green: #218838
+Bet Area Yellow
+
+Chip Colors:
+Red: #E53935
+Blue: #1E88E5
+Black: #212121
+White: #F3F3F3
+Green: #4CAF50
+*/
