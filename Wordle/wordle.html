@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle - BurtonSharp</title>
+    <link rel="stylesheet" href="wordle.css" />
+  </head>
 
+  <body>
+    <header>
+      <h1>Wordle!</h1>
+    </header>
+
+    <div class="board">
+      <div class="cell" data-cell-index="0"></div>
+      <div class="cell" data-cell-index="1"></div>
+      <div class="cell" data-cell-index="2"></div>
+      <div class="cell" data-cell-index="3"></div>
+      <div class="cell" data-cell-index="4"></div>
+      <div class="cell" data-cell-index="5"></div>
+      <div class="cell" data-cell-index="6"></div>
+      <div class="cell" data-cell-index="7"></div>
+      <div class="cell" data-cell-index="8"></div>
+      <div class="cell" data-cell-index="9"></div>
+      <div class="cell" data-cell-index="10"></div>
+      <div class="cell" data-cell-index="11"></div>
+      <div class="cell" data-cell-index="12"></div>
+      <div class="cell" data-cell-index="13"></div>
+      <div class="cell" data-cell-index="14"></div>
+      <div class="cell" data-cell-index="15"></div>
+      <div class="cell" data-cell-index="16"></div>
+      <div class="cell" data-cell-index="17"></div>
+      <div class="cell" data-cell-index="18"></div>
+      <div class="cell" data-cell-index="19"></div>
+      <div class="cell" data-cell-index="20"></div>
+      <div class="cell" data-cell-index="21"></div>
+      <div class="cell" data-cell-index="22"></div>
+      <div class="cell" data-cell-index="23"></div>
+      <div class="cell" data-cell-index="24"></div>
+      <div class="cell" data-cell-index="25"></div>
+      <div class="cell" data-cell-index="26"></div>
+      <div class="cell" data-cell-index="27"></div>
+      <div class="cell" data-cell-index="28"></div>
+      <div class="cell" data-cell-index="29"></div>
+    </div>
+
+    <div id="board">
+      <div class="row row1">
+        <button class="key" onclick="toggleKey(this)">Q</button>
+        <button class="key" onclick="toggleKey(this)">W</button>
+        <button class="key" onclick="toggleKey(this)">E</button>
+        <button class="key" onclick="toggleKey(this)">R</button>
+        <button class="key" onclick="toggleKey(this)">T</button>
+        <button class="key" onclick="toggleKey(this)">Y</button>
+        <button class="key" onclick="toggleKey(this)">U</button>
+        <button class="key" onclick="toggleKey(this)">I</button>
+        <button class="key" onclick="toggleKey(this)">O</button>
+        <button class="key" onclick="toggleKey(this)">P</button>
+      </div>
+      <div class="row row2">
+        <button class="key" onclick="toggleKey(this)">A</button>
+        <button class="key" onclick="toggleKey(this)">S</button>
+        <button class="key" onclick="toggleKey(this)">D</button>
+        <button class="key" onclick="toggleKey(this)">F</button>
+        <button class="key" onclick="toggleKey(this)">G</button>
+        <button class="key" onclick="toggleKey(this)">H</button>
+        <button class="key" onclick="toggleKey(this)">J</button>
+        <button class="key" onclick="toggleKey(this)">K</button>
+        <button class="key" onclick="toggleKey(this)">L</button>
+      </div>
+      <div class="row row3">
+        <button class="key custom" onclick="toggleKey(this)">Enter</button>
+        <button class="key" onclick="toggleKey(this)">Z</button>
+        <button class="key" onclick="toggleKey(this)">X</button>
+        <button class="key" onclick="toggleKey(this)">C</button>
+        <button class="key" onclick="toggleKey(this)">V</button>
+        <button class="key" onclick="toggleKey(this)">B</button>
+        <button class="key" onclick="toggleKey(this)">N</button>
+        <button class="key" onclick="toggleKey(this)">M</button>
+        <button class="key custom3" onclick="toggleKey(this)">Delete</button>
+      </div>
+    </div>
+    <button class="howTo custom2" id="howToButton">&nbsp;How to play?&nbsp;</button>
+
+    <script src="wordle.js"></script>
+  </body>
+</html>
