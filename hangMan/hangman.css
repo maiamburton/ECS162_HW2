@@ -1,0 +1,175 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box; /* sets the element's dimensions include the padding and border */
+}
+
+body {
+    background-color: #FFFDF7;
+    padding-top: 60px;  /* offset spacing from body to banner */
+    padding-top: 60px;  /* offset spacing from body to banner */
+    display: flex; /* Use flexbox on the body to arrange children */
+    justify-content: flex-end; /* Align children to the end (right side) */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Reset any default margin */
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+#banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10%;
+
+    margin: 0;
+    position: fixed;
+    top: 25px;
+    right: 0;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+
+.settingBtn {
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 20px;
+    flex: 0 0 auto; /* don't grow or shrink */
+
+    background-color: #79B473;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.settingBtn:hover {
+    background-color: #6a994e;
+}
+
+#hintBtn {
+    background-color: #FFB100;
+    color: white;
+}
+
+.difficultySetting {
+    width: 80px;
+    height: 25px;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 20px;
+    flex: 0 0 auto; /* don't grow or shrink */
+
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#hintBtn:hover {
+    background-color: #E09D00;
+}
+
+#guessing-container {
+    display: flex; /* Establishes a flex container */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers children horizontally */
+    width: 35vw; /* Sets the width to 50% of the viewport width */
+    height: 100vh;
+    margin: auto; /* Centers the container in the middle of the page */
+
+    position: fixed;
+    right: 8%;
+    top: 15%;
+}
+
+#hanging-tree {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 100vh;
+    align-items: center;
+    padding-top: 100px;
+
+    position: fixed;
+    left: 0;
+    top: 15%;
+}
+
+#hanging-man {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+}
+
+#letter-container,
+#button-container {
+    width: 100%; /* Each child takes the full width of the guess-container */
+    display: flex; /* Establishes a flex container for each section */
+    justify-content: center; /* Centers the buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    margin-top: 50px;
+}
+
+.letterBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px;
+    flex: 0 0 auto; /* don't grow or shrink */
+
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #4D91D1;
+    color: white;
+}
+
+.notSelected.letterBtn:hover {
+    background: #235789;
+}
+
+.letterBox {
+    width: 30px;
+    height:30px;
+    text-align: center;
+    flex: 0 0 auto;
+
+    margin: 0px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+}
+
+.right {
+    color: #79B473;
+    border: 3px solid #79B473;
+    background-color:white;
+}
+
+.wrong {
+    color: #C1292E;
+    border: 3px solid #C1292E;
+    background-color:white;
+}
+
+
+
+
+/*
+https://hangmanwordgame.com/?fca=1&success=0#/
+*/

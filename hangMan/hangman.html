@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hang Man!</title>
+    <link rel="stylesheet" href="hangman.css">
+    
+</head>
+<body>
+    <section id="banner">
+        <section>
+            <button id="newGame" class="settingBtn">New Game</button>
+            <button id="hintBtn" class="settingBtn">HINT</button>
+        </section>
+        <section>
+            <button id="easy" class="difficultySetting settingBtn">Easy</button>
+            <button id="medium" class="difficultySetting settingBtn">Medium</button>
+            <button id="difficult" class="difficultySetting settingBtn">Difficult</button>
+        </section>
+        
+        <section id="info">
+            <h3>Word Length: <span id="wordLength"></span></h3>
+            <h3>Streak: <span id="streak"></span></h3>
+        </section>
+    </section>
+    <section id="guessing-container">
+        <section id="letter-container"></section>
+        <section id="button-container"></section>
+    </section>
+    <section id="hanging-tree">
+        <img id="hanging-man" src="images/start.png">
+    </section>
+    <script src="hangman.js"></script>
+</body>
+</html>
