@@ -39,11 +39,17 @@ function toggleKey(button) {
         if (matchedNum === colNum) {
             setTimeout(function () {
                 // Show alert dialog
-                alert("Congrats, you won!\n\nPress 'OK' to play again or restart the board.");
+                alert("Congrats, you won!\n\nExit this message to play again or restart the board.");
                 resetBoard();
             }, 100);
-
-
+        }
+        else if(rowCounter === 5)
+        {
+            setTimeout(function () {
+                // Show alert dialog
+                alert("Oops! Word not found...\n\nExit this message to play again or restart the board.");
+                resetBoard();
+            }, 100);
         }
         rowCounter++;
     }
@@ -93,18 +99,19 @@ function checkWord(row) {
 }
 
 function resetBoard() {
+    matchedLetters.clear();
     counter = 0;
     wordNum = Math.floor(Math.random() * wordsToUse.length);
     wordleWord = "";
     rowCounter = 0;
     cellNum = colNum * rowCounter;
-    for (let i = 0; i < numOfCells; i++) {
+    for (let i = 0; i < numOfCells+1; i++) {
         cells[i].classList.remove('correctCell');
         cells[i].classList.remove('correctLetter');
         cells[i].classList.remove('incorrectLetter');
         cells[i].textContent = '';
     }
-    for (let k = 0; k < 28; k++) {
+    for (let k = 0; k < 29; k++) {
         keys[k].classList.remove('correctLetter');
         keys[k].classList.remove('correctCell');
         keys[k].classList.remove('incorrectLetter');
@@ -120,3 +127,4 @@ howToButton.addEventListener("click", function () {
         + "\n- If the box instead turns yellow, that indicates that the letter in the box is in the word, but you have not put it in the correct spot."
         + "\n- When the box turns grey, that means that the letter in the box is not in the word at all.");
 });
+
