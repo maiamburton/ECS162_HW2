@@ -11,10 +11,15 @@ body {
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap as needed */
+    display: block;
     justify-content: space-around; /* Distributes space around items */
     align-items: center; /* Vertically aligns items */
+}
+
+#welcomePage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 a:link {
@@ -29,12 +34,6 @@ a:visited {
 
 a:hover {
     text-decoration: underline;
-}
-
-.left, .right {
-    flex: 1;
-    display: flex;
-    align-items: center;
 }
 
 .dark-section {
