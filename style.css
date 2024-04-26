@@ -53,13 +53,16 @@ a:hover {
 
 .banner {
     background-color: #FFFFFF;
-    top: 0;
-    left: 0;
-    width: 100%;
-    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    
     margin: 0px;
     padding: 0px 40px; /* top/bottom, left/right */
 }
@@ -84,9 +87,12 @@ a:hover {
 }
 
 .banner .right {
+    display: flex;
+    align-items: flex-start;
     justify-content: flex-end;
     gap: 40px;  /* spacing between banner tags */
     padding: 0px;
+    margin-right: 70px;
 }
 
 #logoB {
@@ -122,6 +128,8 @@ a:hover {
 #gameFrame {
     margin-top: 20px;
     border: 1px solid #ccc;
+    width: 100%;
+    height: 650px;
 }
 
 #learnMore {
@@ -141,7 +149,9 @@ a:hover {
 }
 
 #intro {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #home_img {
