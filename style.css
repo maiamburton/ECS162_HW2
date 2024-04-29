@@ -22,6 +22,22 @@ main {
     align-items: center;
 }
 
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home_img {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+
+    display: block;
+    margin: 0px;
+    padding: 15px 10px;
+}
+
 a:link {
     color: #41BBD9;
     text-decoration: none;
@@ -60,7 +76,6 @@ a:hover {
     position: fixed;
     top: 0;
     left: 0;
-    
     
     margin: 0px;
     padding: 0px 40px; /* top/bottom, left/right */
@@ -145,22 +160,6 @@ a:hover {
 
 #titleEmph {
     color: #99C24D;
-}
-
-#intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#home_img {
-    width: 100%;
-    max-width: 270px;
-    height: auto;
-
-    display: block;
-    margin: 0px;
-    padding: 15px 10px;
 }
 
 
