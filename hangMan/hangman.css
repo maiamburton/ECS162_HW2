@@ -24,7 +24,7 @@ button {
     border: none;
 }
 
-#banner{
+#banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,6 +60,16 @@ button {
 
 .settingBtn:hover {
     background-color: #6a994e;
+}
+
+.selectedLevel {
+    color: white;
+    background-color: grey;
+}
+
+.selectedLevel:hover {
+    color: white;
+    background-color: grey;
 }
 
 #hintBtn {
@@ -149,7 +159,7 @@ button {
     text-align: center;
     flex: 0 0 auto;
 
-    margin: 0px 10px;
+    margin: 0px 3px;
     font-size: 20px;
     font-weight: bold;
     border-bottom: 3px solid black;
@@ -167,7 +177,16 @@ button {
     background-color:white;
 }
 
+@media (max-width: 600px) {
+    .settingBtn, .difficultySetting {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
 
+    #guessing-container, #letter-container, #button-container {
+        flex-direction: column;
+    }
+}
 
 
 /*
