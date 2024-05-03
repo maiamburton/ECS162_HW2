@@ -10,4 +10,5 @@ Our Wordle implementation was made by Katie and is based off of the NYT Wordle g
 
 ## Word Unscramble
 
-The Word Unscramble game is an open source game that was found on github at this link: https://github.com/GZ30eee/Word-Scramble-Game.
+The Word Unscramble game is an open source game that was found on github at this link: https://github.com/GZ30eee/Word-Scramble-Game. It is licensed under the MIT license and we made sure to include the proper citation on our website. $//$
+f
