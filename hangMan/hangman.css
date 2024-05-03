@@ -93,19 +93,6 @@ button {
     background-color: #E09D00;
 }
 
-#guessing-container {
-    display: flex; /* Establishes a flex container */
-    flex-direction: column; /* Stacks children vertically */
-    align-items: center; /* Centers children horizontally */
-    width: 35vw; /* Sets the width to 50% of the viewport width */
-    height: 100vh;
-    margin: auto; /* Centers the container in the middle of the page */
-
-    position: fixed;
-    right: 8%;
-    top: 15%;
-}
-
 #hanging-tree {
     display: flex;
     flex-direction: column;
@@ -177,18 +164,101 @@ button {
     background-color:white;
 }
 
-@media (max-width: 600px) {
-    .settingBtn, .difficultySetting {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-
-    #guessing-container, #letter-container, #button-container {
-        flex-direction: column;
-    }
-}
-
 
 /*
 https://hangmanwordgame.com/?fca=1&success=0#/
 */
+@media only screen and (min-width: 481px)
+{
+    #guessing-container {
+        display: flex; /* Establishes a flex container */
+        flex-direction: column; /* Stacks children vertically */
+        align-items: center; /* Centers children horizontally */
+        width: 35vw; /* Sets the width to 50% of the viewport width */
+        height: 100vh;
+        margin: auto; /* Centers the container in the middle of the page */
+    
+        position: fixed;
+        right: 8%;
+        top: 15%;
+    }   
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) 
+{
+    #banner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #banner > section {
+        margin-bottom: 10px;
+    }
+
+    #info {
+        font-size: 10px;
+    }
+
+    #wordLength
+    {
+        margin-right: 20px;
+    }
+
+    #streak
+    {
+        margin-left: 20px;
+    }
+
+    .settingBtn
+    {
+        width: auto;
+        height: auto;
+    }
+
+    .difficultySetting
+    {
+        width: auto;
+        height: auto;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .letterBtn {
+        display: flex; /* Use flexbox */
+        justify-content: center; /* Center horizontally */
+        align-items: center; 
+        margin: 5px;
+        width: 25px;
+        height: 25px;
+        font-size: 13px;
+        line-height: 25px;
+        padding: 4px;
+    }
+
+    #guessing-contanier, #button-container {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-gap: 5px; 
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+        
+        position: fixed;
+        bottom: 15%;
+        left: 45%;
+    }
+
+    #letter-container
+    {
+        position: fixed;
+        bottom: 25%;
+        right: 0%;
+    }
+
+    #hanging-tree, #hanging-man
+    {
+        margin-left: 18%;
+        margin-bottom: 50%
+    }
+}
