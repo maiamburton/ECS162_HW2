@@ -6,8 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-color: #FFFDF7;
-  /* background: url("/Users/Katie/Desktop/BSWords/bg.svg"); */
+  background-color: #FFFDF7; /* Changed background to the color  #FFFDF7. Previous background: url("/Users/Katie/Desktop/BSWords/bg.svg"); */
   display: flex;
   padding: 0 10px;
   align-items: center;
