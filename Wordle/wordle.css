@@ -1,82 +1,90 @@
 h1 {
-    text-align: center;
+  text-align: center;
+}
+
+body
+{
+  background-color: #FFFDF7;
+  /* background: url("/Users/Katie/Desktop/BSWords/bg.svg"); */
 }
 
 .board {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  row-gap: 10px;
-  column-gap: 1px;
-  margin: auto;
-  max-width: 400px;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+row-gap: 10px;
+column-gap: 1px;
+margin: auto;
+max-width: 350px;
+margin-top: 20px;
 }
 
 .cell {
-  background-color: #fff;
-  border: 2px solid #333;
-  font-size: 48px;
-  font-weight: bold;
-  cursor: pointer;
-  aspect-ratio: 1 / 1; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 70px;
-  color: #444;
-  touch-action: manipulation;
+background-color: #fff;
+border: 2px solid #333;
+font-size: 48px;
+font-weight: bold;
+cursor: pointer;
+aspect-ratio: 1 / 1; 
+display: flex;
+align-items: center;
+justify-content: center;
+height: 60px;
+color: #444;
+touch-action: manipulation;
 }
 
 .key {
-  margin: 1px;
-  padding: 8px;
-  font-size: 20px;
-  cursor: pointer;
-  touch-action: manipulation;
+margin: 1px;
+padding: 8px;
+font-size: 20px;
+cursor: pointer;
+touch-action: manipulation;
 }
 
 .row {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5px;
-  gap: 5px;
+display: flex;
+justify-content: center;
+margin-bottom: 5px;
+gap: 5px;
 }
 
 .row.row1 {
-  margin-top: 12px;
-  margin-right: 6px;
+margin-top: 12px;
+margin-right: 6px;
 }
 
 .row.row2 {
-  margin-top: 8px;
-  margin-right: 2px;
+margin-top: 8px;
+margin-right: 2px;
 }
 
 .row.row3 {
-  margin-top: 8px;
-  margin-right: 4px;
+margin-top: 8px;
+margin-right: 4px;
 }
 
 .correctCell {
-  background-color: #2ee65c;
+background-color: #2ee65c;
 }
 
 .correctLetter {
-  background-color: #e6e32e;
+background-color: #e6e32e;
 }
 
 .correctLetter2 {
-  margin: 1px;
+margin: 1px;
 }
 
 .incorrectLetter {
-  background-color: #979792;
+background-color: #979792;
 }
 
 .howTo:hover {
-  background-color: #c0c2c4;
+background-color: #c0c2c4;
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) 
+{
   .board {
     row-gap: 10px;
     column-gap: 1px;
@@ -103,13 +111,13 @@ h1 {
 
   .custom
   {
-    width: 60px;
+    width: 55px;
     height: 40px;
   }
 
   .custom3
   {
-    width: 80px;
+    width: 55px;
     height: 40px;
   }
 
@@ -119,9 +127,10 @@ h1 {
     height: 40px;
   }
 
-  .key {
-    font-size: 17px;
-    padding: 6px;
+  .key 
+  {
+    font-size: 15px;
+    padding: 4px;
   }
 
   .cell {
