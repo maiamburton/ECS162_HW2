@@ -1,6 +1,6 @@
 # Word Game Arcade
 
-Our arcade contains the word games Hangman, Wordle, and Word Unscramble. Our main html page is index.html and it uses an iframe to host the html pages for the three games. 
+Our arcade contains the word games Hangman, Wordle, and Word Unscramble. They are hosted on a main html file and interact with the user with an iframe rather than on a new page. 
 
 ## Hangman
 
