@@ -4,7 +4,7 @@ Our arcade contains the word games Hangman, Wordle, and Word Unscramble. Our mai
 
 ## Hangman
 
-Our Hangman implementation was made by Maia. It gives the user three difficulty settings of easy, medium, and difficult. As the difficulty settings increase, so do the lengths of the words. Correctly guessing multiple words in a row will start a streak count, and for every consecutive correct guess, the streak number will increase. A hint button is also available to give you one correct letter if you are stuck. The game will tolerate 6 wrong guesses but will end on the 7th. 
+Our Hangman implementation was made by Maia. It gives the user three difficulty settings of easy, medium, and difficult. As the difficulty settings increase, so do the lengths of the words. Correctly guessing multiple words in a row will start a streak count, and for every consecutive correct word guess, the streak number will increase. A hint button is also available to give you one correct letter if you are stuck. The game will tolerate 6 wrong guesses but will end on the 7th. 
 
 ## Wordle
 
