@@ -184,11 +184,21 @@ function countRemainingLetters(selectedLetter) {
 
         image.src = "images/Win.png";
         hintBtn.disabled = true;
+        let buttons = bContainer.querySelectorAll('.letterBtn');
+
+        buttons.forEach(function (button) {
+            button.disabled = false;
+        })
         endGameLetterBoxes();
     }
 }
 
 function gameOver() {
+    let buttons = bContainer.querySelectorAll('.letterBtn');
+
+        buttons.forEach(function (button) {
+            button.disabled = false;
+        })
     image.src = "images/Gameover.png";
     usedWords.push(secretWord);
     streak.textContent = 0;
