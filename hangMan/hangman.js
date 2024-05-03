@@ -187,7 +187,7 @@ function countRemainingLetters(selectedLetter) {
         let buttons = bContainer.querySelectorAll('.letterBtn');
 
         buttons.forEach(function (button) {
-            button.disabled = false;
+            button.disabled = true;
         })
         endGameLetterBoxes();
     }
@@ -222,4 +222,3 @@ function endGameLetterBoxes() {
         letter.style.fontSize = '20px';
     })
 }
-
