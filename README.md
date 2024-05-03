@@ -14,4 +14,6 @@ Our Wordle implementation was made by Katie and is based off of the NYT Wordle g
 
 The Word Unscramble game is an open source game that was found on github at this link: https://github.com/GZ30eee/Word-Scramble-Game. It is licensed under the MIT license and we made sure to include the proper citation on our website. It includes a list of words that are scrambled and given to the user along with a hint and a difficulty score, based on the length of the word. The user then has 30 seconds to guess the word and if guessed correctly the score is incremented and another word becomes available to guess. If the word is not guess within the timeframe, the game is refreshed and a new word appears. Integrating this code into our website included a few design changes. The css was changed so that the background matched the backgrounds of the Hangman and Wordle games, and a link to the creators social media was also removed. In addition to those visible changes, function names inside the code were changed.
 
-### Reactive Design
+## Reactive Design
+
+Burton-Sharp games is designed to work on standard desktop and mobile screen sizes. Comparing desktop and mobile you will notice that the structure of Hangman differs but its functionality remains the same. Wordle and Word Unscramble structure and functionality is the same on mobile vs desktop. 
