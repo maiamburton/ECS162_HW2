@@ -1,60 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Burton & Sharp Game Site</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-</head>
-<body>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+  </head>
+  <body>
     <header>
-        <section class="banner" style="background-color: #f2efef;">
-            <section class="left">
-                <h3 title="To the top" class="banner-words">
-                    <section id="logo">
-                        <span id="logoB">Burton</span><span id="logoS">Sharp</span>
-                    </section>
-                    <section>
-                        <img src="image_holder.png" id="home_img">
-                    </section>
-                </h3>
+      <section class="banner" style="background-color: #f2efef">
+        <section class="left">
+          <h3 title="To the top" class="banner-words">
+            <section id="logo">
+              <span id="logoB">Burton</span><span id="logoS">Sharp</span>
             </section>
+            <section>
+              <img src="image_holder.png" id="home_img" />
+            </section>
+          </h3>
         </section>
+      </section>
     </header>
     <main>
-        <section class="light-section" style="background-color: #f2efef;">
-            <section id="welcomePage">
-                <section class="left intro">
-                    <h1 id="welcomeTitle">Welcome to <span id="titleEmph">Burton-Sharp Games!</span></h1>
-                    <h4 id="subtitle">Classic fun at your fingertips!</h4>
-                    <p>Our site is where timeless classics meet new puzzles! Whether you're forming words in Wordle, 
-                        playing hangman, or deciphering anagrams, we've got a variety of word-based games to keep your 
-                        mind sharp and entertained.
-                    </p>
-                </section>
-            </section>
-            
-            <select id="gameSelect" onchange="changeGame()">
-                <option value="hangMan/hangman.html">Hang man</option>
-                <!-- <option value="BlackJack/blackjack.html">Black Jack</option> -->
-                <option value="Wordle/wordle.html">Wordle</option>
-                <option value="Scramble/scramble.html">Word Unscramble</option>
-            </select>
+      <section class="light-section" style="background-color: #f2efef">
+        <section id="welcomePage">
+          <section class="left intro">
+            <h1 id="welcomeTitle">
+              Welcome to <span id="titleEmph">Burton-Sharp Games!</span>
+            </h1>
+            <h4 id="subtitle">Classic fun at your fingertips!</h4>
+            <p>
+              Our site is where timeless classics meet new puzzles! Whether
+              you're forming words in Wordle, playing hangman, or deciphering
+              anagrams, we've got a variety of word-based games to keep your
+              mind sharp and entertained.
+            </p>
+          </section>
         </section>
 
-        <section class="dark-section">
-            <iframe id="gameFrame" src="hangMan/hangman.html"></iframe>
-        </section>
-    </main>
-</body>
-<footer>
-    <section class="box">
-        <p class="textAlts">&copy; 2024 Maia Burton and Katie Sharp <br>
-            Copyright &copy; 2024 Word Scramble Game
-        </p>
-        <a href="copyrightinfo.html">
-            <p>Click for more copyright information.</p>
-        </a>
+        <select id="gameSelect" onchange="changeGame()">
+          <option value="hangMan/hangman.html">Hang man</option>
+          <!-- <option value="BlackJack/blackjack.html">Black Jack</option> -->
+          <option value="Wordle/wordle.html">Wordle</option>
+          <option value="Scramble/scramble.html">Word Unscramble</option>
+        </select>
       </section>
-</footer>
+
+      <section class="dark-section">
+        <iframe id="gameFrame" src="hangMan/hangman.html"></iframe>
+      </section>
+    </main>
+  </body>
+  <footer>
+    <section class="box">
+      <p class="textAlts">
+        &copy; 2024 Maia Burton and Katie Sharp <br />
+        Copyright &copy; 2024 Word Scramble Game
+      </p>
+      <a href="copyrightinfo.html">
+        <p>Click for more copyright information.</p>
+      </a>
+    </section>
+  </footer>
 </html>

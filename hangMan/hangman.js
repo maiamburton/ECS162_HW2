@@ -8,17 +8,17 @@ let secretWord = "";
 let usedWords = [];
 
 
-let easyWords = ['apple', 'ball', 'cat', 'queen', 'tree', 'ink', 'lion', 'puppy', 
-'rose', 'chair', 'duck', 'boat', 'nest', 'star', 'wind', 'blue', 'joy', 'mask', 'leaf'];
+let easyWords = ['apple', 'ball', 'cat', 'queen', 'tree', 'ink', 'lion', 'puppy',
+    'rose', 'chair', 'duck', 'boat', 'nest', 'star', 'wind', 'blue', 'joy', 'mask', 'leaf'];
 
-let mediumWords = ['pancake', 'banana', 'wallet', 'orange', 'jungle', 'ladder', 
-'noodle', 'sponge', 'yellow', 'candle', 'magnet', 'grass', 'clock', 'rocket', 'whisper',
-'zebra', 'whine'];
+let mediumWords = ['pancake', 'banana', 'wallet', 'orange', 'jungle', 'ladder',
+    'noodle', 'sponge', 'yellow', 'candle', 'magnet', 'grass', 'clock', 'rocket', 'whisper',
+    'zebra', 'whine'];
 
-let difficultWords = ['strength', 'abruptly', 'ivory', 'swivel', 'transcript', 'kitsch', 
-'espionage', 'witchcraft', 'wristwatch', 'onyx', 'nowadays', 'oxygen', 'fluffiness', 
-'megahertz', 'galaxy', 'puzzling', 'quartz', 'zipper', 'zodiac', 'gazebo', 'flapjack', 
-'whiskey', 'voodoo', 'luxury', 'unknown', 'twelfth', 'croquet', 'jazz'];
+let difficultWords = ['strength', 'abruptly', 'ivory', 'swivel', 'transcript', 'kitsch',
+    'espionage', 'witchcraft', 'wristwatch', 'onyx', 'nowadays', 'oxygen', 'fluffiness',
+    'megahertz', 'galaxy', 'puzzling', 'quartz', 'zipper', 'zodiac', 'gazebo', 'flapjack',
+    'whiskey', 'voodoo', 'luxury', 'unknown', 'twelfth', 'croquet', 'jazz'];
 
 let difficultyIndex = [easyWords, mediumWords, difficultWords];
 
@@ -39,7 +39,7 @@ let lContainer = document.getElementById('letter-container');
 
 
 // Create 26 buttons for each letter in the alphabet
-for (let i = 0; i < 26; i++){
+for (let i = 0; i < 26; i++) {
     let newButton = document.createElement("button");
     newButton.textContent = String.fromCharCode(65 + i);  // ASCII value of 'A' is 65
     newButton.id = String.fromCharCode(65 + i);
@@ -50,13 +50,13 @@ for (let i = 0; i < 26; i++){
     bContainer.appendChild(newButton);
 
     // Add event listener to each button
-    newButton.addEventListener("click", function() {
+    newButton.addEventListener("click", function () {
         this.classList.remove("notSelected");
         let selectedLetter = this.textContent;
         let letterBox = lContainer.querySelectorAll('.letterBox');
         let found = false;
 
-        letterBox.forEach(function(letter) {
+        letterBox.forEach(function (letter) {
             if (letter.classList.contains(selectedLetter)) {
                 letter.textContent = selectedLetter;
                 found = true;
@@ -78,7 +78,7 @@ for (let i = 0; i < 26; i++){
     });
 }
 
-function selectDifficulty (selectedButon, levelNum) {
+function selectDifficulty(selectedButon, levelNum) {
     let allButtons = [easyBtn, mediumBtn, difficultBtn];
 
     allButtons.forEach(button => {
@@ -116,9 +116,9 @@ function initializedGame() {
     document.getElementById('wordLength').textContent = secretWord.length;
     remainingLetters = secretWord.length;
     usedWords.push(secretWord)
-    
+
     answerArray = [];
-    for (let i = 0; i < secretWord.length; i++){
+    for (let i = 0; i < secretWord.length; i++) {
         answerArray[i] = "_";
     }
 
@@ -141,7 +141,7 @@ function initializedGame() {
 function resetButtonSettings() {
     let buttons = bContainer.querySelectorAll('.letterBtn');
 
-    buttons.forEach(function(button) {
+    buttons.forEach(function (button) {
         button.className = '';
         button.classList.add('letterBtn', 'notSelected');
     })
@@ -150,13 +150,13 @@ function resetButtonSettings() {
 
 let imageNames = ["start.png", "1wrong.png", "2wrong.png", "3wrong.png", "4wrong.png", "5wrong.png", "6wrong.png", "Win.png"];
 function updateImage() {
-    image.src = "images/" + imageNames[maxErrors-guessesRemaining];
+    image.src = "images/" + imageNames[maxErrors - guessesRemaining];
 }
 
 
 hintBtn.addEventListener('click', hintBtnClick);
-function hintBtnClick () {
-    for (let i = 0; i < secretWord.length; i++){
+function hintBtnClick() {
+    for (let i = 0; i < secretWord.length; i++) {
         if (answerArray[i] == "_") {
             answerArray[i] = secretWord[i];
             let hintLetter = secretWord[i];
@@ -169,12 +169,12 @@ function hintBtnClick () {
 
 
 function countRemainingLetters(selectedLetter) {
-    for (let i = 0; i < secretWord.length; i++){
+    for (let i = 0; i < secretWord.length; i++) {
         if (selectedLetter == secretWord[i]) {
             remainingLetters--;
         }
     }
-    
+
     if (remainingLetters <= 0) {
         let streak = document.getElementById('streak');
         streakCounter++;
@@ -198,10 +198,10 @@ function gameOver() {
 function endGameLetterBoxes() {
     // Iterate through letter boxes
     let letterBox = lContainer.querySelectorAll('.letterBox');
-    letterBox.forEach(function(letter) {
-    
+    letterBox.forEach(function (letter) {
+
         // Iterate through the letter's class names and find the single character name
-        Array.from(letter.classList).forEach(function(className) {
+        Array.from(letter.classList).forEach(function (className) {
             if (className.length === 1) {
                 letter.innerHTML = className;
             }

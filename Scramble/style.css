@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-color: #FFFDF7; /* Changed background to the color  #FFFDF7. Previous background: url("/Users/Katie/Desktop/BSWords/bg.svg"); */
+  background-color: #fffdf7; /* Changed background to the color  #FFFDF7. Previous background: url("/Users/Katie/Desktop/BSWords/bg.svg"); */
   display: flex;
   padding: 0 10px;
   align-items: center;
@@ -171,9 +171,9 @@ input.flash {
 }
 
 .round-img {
-  border-radius: 50%; 
-  width: 30px; 
-  height: 30px; 
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
   margin-left: 10px;
 }

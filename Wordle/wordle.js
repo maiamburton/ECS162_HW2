@@ -43,11 +43,10 @@ function toggleKey(button) {
                 resetBoard();
             }, 100);
         }
-        else if(rowCounter === 5)
-        {
+        else if (rowCounter === 5) {
             setTimeout(function () {
                 // Show alert dialog
-                alert("Oops! Word not found... This round's word was: " + wordleWord+"\n\nExit this message to play again or restart the board.");
+                alert("Oops! Word not found... This round's word was: " + wordleWord + "\n\nExit this message to play again or restart the board.");
                 resetBoard();
             }, 100);
         }
@@ -107,32 +106,26 @@ function resetBoard() {
     wordleWord = "";
     rowCounter = 0;
     cellNum = colNum * rowCounter;
-    for (let i = 0; i < numOfCells+1; i++) {
-        if(cells[i].classList.contains('correctCell'))
-        {
+    for (let i = 0; i < numOfCells + 1; i++) {
+        if (cells[i].classList.contains('correctCell')) {
             cells[i].classList.remove('correctCell');
         }
-        if(cells[i].classList.contains('correctLetter'))
-        {
+        if (cells[i].classList.contains('correctLetter')) {
             cells[i].classList.remove('correctLetter');
         }
-        if(cells[i].classList.contains('incorrectLetter'))
-        {
-            cells[i].classList.remove('incorrectLetter'); 
+        if (cells[i].classList.contains('incorrectLetter')) {
+            cells[i].classList.remove('incorrectLetter');
         }
         cells[i].textContent = '';
     }
     for (let k = 0; k < 29; k++) {
-        if(keys[k].classList.contains('correctLetter2'))
-        {
+        if (keys[k].classList.contains('correctLetter2')) {
             keys[k].classList.remove('correctLetter2');
         }
-        if(keys[k].classList.contains('correctCell'))
-        {
+        if (keys[k].classList.contains('correctCell')) {
             keys[k].classList.remove('correctCell');
         }
-        if(keys[k].classList.contains('incorrectLetter'))
-        {
+        if (keys[k].classList.contains('incorrectLetter')) {
             keys[k].classList.remove('incorrectLetter');
         }
     }
