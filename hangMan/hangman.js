@@ -52,6 +52,7 @@ for (let i = 0; i < 26; i++) {
     // Add event listener to each button
     newButton.addEventListener("click", function () {
         this.classList.remove("notSelected");
+        newButton.disabled = true;
         let selectedLetter = this.textContent;
         let letterBox = lContainer.querySelectorAll('.letterBox');
         let found = false;
@@ -144,6 +145,7 @@ function resetButtonSettings() {
     buttons.forEach(function (button) {
         button.className = '';
         button.classList.add('letterBtn', 'notSelected');
+        button.disabled = false;
     })
 }
 
