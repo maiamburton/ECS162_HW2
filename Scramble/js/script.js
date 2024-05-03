@@ -148,7 +148,6 @@ const showWinWord = () => {
 };
 
 // Verify the user's guess is correct
-checkBtn.addEventListener("click", checkWord);
 window.checkWord = () => {
   let userWord = inputField.value.toLowerCase();
 
@@ -199,5 +198,5 @@ window.checkWord = () => {
   inputField.style.display = "block";
 };
 
+checkBtn.addEventListener("click", checkWord);
 refreshBtn.addEventListener("click", initGame);
-
