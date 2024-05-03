@@ -47,7 +47,7 @@ function toggleKey(button) {
         {
             setTimeout(function () {
                 // Show alert dialog
-                alert("Oops! Word not found...\n\nExit this message to play again or restart the board.");
+                alert("Oops! Word not found... This round's word was: " + wordleWord+"\n\nExit this message to play again or restart the board.");
                 resetBoard();
             }, 100);
         }
@@ -60,7 +60,8 @@ function getWord(wordNum) {
 }
 
 function checkWord(row) {
-    let i = row * colNum;
+    let i = 0;
+    i = row * colNum;
 
     while (i < colNum * (row + 1)) {
         for (let j = row * colNum; j < colNum * (row + 1); j++) {
@@ -94,6 +95,7 @@ function checkWord(row) {
             }
         }
     }
+
     matchedNum = matchedLetters.size;
     matchedLetters.clear();
 }
@@ -106,15 +108,33 @@ function resetBoard() {
     rowCounter = 0;
     cellNum = colNum * rowCounter;
     for (let i = 0; i < numOfCells+1; i++) {
-        cells[i].classList.remove('correctCell');
-        cells[i].classList.remove('correctLetter');
-        cells[i].classList.remove('incorrectLetter');
+        if(cells[i].classList.contains('correctCell'))
+        {
+            cells[i].classList.remove('correctCell');
+        }
+        if(cells[i].classList.contains('correctLetter'))
+        {
+            cells[i].classList.remove('correctLetter');
+        }
+        if(cells[i].classList.contains('incorrectLetter'))
+        {
+            cells[i].classList.remove('incorrectLetter'); 
+        }
         cells[i].textContent = '';
     }
     for (let k = 0; k < 29; k++) {
-        keys[k].classList.remove('correctLetter');
-        keys[k].classList.remove('correctCell');
-        keys[k].classList.remove('incorrectLetter');
+        if(keys[k].classList.contains('correctLetter2'))
+        {
+            keys[k].classList.remove('correctLetter2');
+        }
+        if(keys[k].classList.contains('correctCell'))
+        {
+            keys[k].classList.remove('correctCell');
+        }
+        if(keys[k].classList.contains('incorrectLetter'))
+        {
+            keys[k].classList.remove('incorrectLetter');
+        }
     }
 }
 
@@ -127,4 +147,3 @@ howToButton.addEventListener("click", function () {
         + "\n- If the box instead turns yellow, that indicates that the letter in the box is in the word, but you have not put it in the correct spot."
         + "\n- When the box turns grey, that means that the letter in the box is not in the word at all.");
 });
-
