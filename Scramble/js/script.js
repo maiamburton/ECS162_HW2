@@ -1,3 +1,4 @@
+// DOM Locators
 const wordText = document.querySelector(".word"),
   hintText = document.querySelector(".hint span"),
   timeText = document.querySelector(".time b"),
@@ -8,6 +9,8 @@ const messageElement = document.getElementById("message");
 const scoreText = document.querySelector(".score b"); // Add this line
 let score = 0; // Add this line
 let correctWord, timer;
+
+// Correct Answer Feedback
 const scoreWords = [
   "Amazing",
   "Wonderful",
@@ -20,6 +23,8 @@ const scoreWords = [
   "Impressive",
   "Spectacular",
 ];
+
+// Initialize the time and start count down
 const initTimer = (maxTime) => {
   clearInterval(timer);
   timer = setInterval(() => {
@@ -27,6 +32,9 @@ const initTimer = (maxTime) => {
       maxTime--;
       return (timeText.innerText = maxTime);
     }
+
+    // When the timer runs out
+    // Clear the timer and display what the answer was
     clearInterval(timer);
     messageElement.innerHTML = `Time off! <span style="color: #39A7FF; background-color: #EEF5FF;">${correctWord.toUpperCase()}</span> was the correct word`;
     inputField.style.display = "none"; // Hide the input box
@@ -37,31 +45,41 @@ const initTimer = (maxTime) => {
   }, 1000);
 };
 
-const initGame = () => {
-  initTimer(30);
+// Select random word, shuffle letters, and load to page
+let initWord = () => {
+  // select a word at random from the list
   let randomIndex = Math.floor(Math.random() * words.length);
   let randomObj = words[randomIndex];
+  
+  // Split the word into individual characters
   let wordArray = randomObj.word.split("");
+  
+  // Shuffle the array
   for (let i = wordArray.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [wordArray[i], wordArray[j]] = [wordArray[j], wordArray[i]];
   }
+
+  // Load the scrambled word and the paired hint
   wordText.innerText = wordArray.join("");
   hintText.innerText = randomObj.hint;
+
   correctWord = randomObj.word.toLowerCase();
   inputField.value = "";
   inputField.setAttribute("maxlength", correctWord.length);
   inputField.className = "";
+}
 
-  // Determine word class based on length and number of repeating characters
+// Determine word class based on length and number of repeating characters
+let initDifficulty = () => {
   let wordClass;
   let wordLength = correctWord.length;
   if (wordLength <= 4) {
-    wordClass = "common";
+    wordClass = "easy";
   } else if (wordLength <= 6) {
-    wordClass = "rare";
+    wordClass = "medium";
   } else if (wordLength <= 8) {
-    wordClass = "exclusive";
+    wordClass = "difficult";
   } else {
     wordClass = "legendary";
   }
@@ -72,15 +90,15 @@ const initGame = () => {
 
   // Change colors based on word class
   switch (wordClass) {
-    case "common":
+    case "easy":
       wordClassElement.style.color = "black";
       wordClassElement.style.backgroundColor = "lightblue";
       break;
-    case "rare":
+    case "medium":
       wordClassElement.style.color = "white";
       wordClassElement.style.backgroundColor = "red";
       break;
-    case "exclusive":
+    case "difficult":
       wordClassElement.style.color = "black";
       wordClassElement.style.backgroundColor = "gold";
       break;
@@ -89,12 +107,19 @@ const initGame = () => {
       wordClassElement.style.backgroundColor = "purple";
       break;
   }
+}
 
+const initGame = () => {
+  initTimer(30);  // Set the timer for 30 seconds
+  initWord(); // Select word and hint
+  initDifficulty(); // Display word difficulty
+  
   messageElement.textContent = "";
 };
 initGame();
 
-const updateScoreColor = () => {
+// Change score label to show a win word
+const showWinWord = () => {
   const labelElement = document.getElementById("scoreLabel");
   const scoreValueElement = document.getElementById("scoreValue");
   let displayWord;
@@ -122,8 +147,12 @@ const updateScoreColor = () => {
   }, 1100);
 };
 
+// Verify the user's guess is correct
+checkBtn.addEventListener("click", checkWord);
 window.checkWord = () => {
   let userWord = inputField.value.toLowerCase();
+
+  // Check for false positive input
   if (!userWord) {
     messageElement.textContent = "Please enter the word to check!";
     inputField.classList.add("flash"); // Add the flash effect
@@ -133,19 +162,25 @@ window.checkWord = () => {
     }, 2000);
     return;
   }
+
+  // Check if the user's guess is wrong
   if (userWord !== correctWord) {
     inputField.classList.remove("correct");
     inputField.classList.add("incorrect");
     messageElement.textContent = "Oops! Try again.";
     return;
   }
+
+  // Display the correct word
   inputField.classList.remove("incorrect");
   inputField.classList.add("correct");
   messageElement.textContent = `Yay, ${correctWord.toUpperCase()} is the correct word!`;
 
+  // Reset the timer
   let timeLeft = parseInt(timeText.innerText);
   clearInterval(timer); // Clear the timer
 
+  // Update the user's score based on the time left
   if (timeLeft > 25) {
     score += 20;
   } else if (timeLeft > 20) {
@@ -159,10 +194,10 @@ window.checkWord = () => {
   }
   scoreText.innerText = score; // Update the score display
 
-  updateScoreColor();
+  showWinWord();
   setTimeout(initGame, 2000);
   inputField.style.display = "block";
 };
 
 refreshBtn.addEventListener("click", initGame);
-checkBtn.addEventListener("click", checkWord);
+
