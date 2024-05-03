@@ -16,4 +16,4 @@ The Word Unscramble game is an open source game that was found on github at this
 
 ## Reactive Design
 
-Burton-Sharp games is designed to work on standard desktop and mobile screen sizes. Comparing desktop and mobile you will notice that the structure of Hangman differs but its functionality remains the same. Wordle and Word Unscramble structure and functionality is the same on mobile vs desktop. 
+Burton-Sharp games is designed to work on standard desktop and mobile screen sizes. Comparing desktop and mobile you will notice that the structure of Hangman differs but its functionality remains the same. Wordle and Word Unscramble structure and functionality are the same on mobile vs desktop. 
