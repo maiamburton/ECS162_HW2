@@ -82,7 +82,7 @@ body {
   background-color: #c0c2c4;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   .board {
     row-gap: 10px;
     column-gap: 1px;
